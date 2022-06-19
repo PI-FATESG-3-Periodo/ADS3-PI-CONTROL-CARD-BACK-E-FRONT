@@ -1,0 +1,2343 @@
+/* 
+    Created on : 15 de jun. de 2022, 16:04:03
+    Author     : anapriscilla
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --font-family-sans-serif: Mulish, sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --color-principal: #3C64B1;
+    --color-pr-hover: #3057A1; 
+    --color-secundaria: #FF7955;
+    --color-sec-hover: #F47451;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+nav {
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-family:  Mulish, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #515151;
+    text-align: left;
+    background-color:rgb(247, 250, 255)c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #3f84fc;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #0458eb;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /*border: 1px solid rgba(0, 0, 0, 0.125);*/
+    border-radius: 0;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-header {
+    padding: 3rem 5rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.015);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+    text-align: center;
+}
+
+.dashboard {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.dashboard-app {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    margin-top: 84px;
+}
+
+.dashboard-content {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.dashboard-nav {
+    min-width: 238px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: #3057A1;
+}
+
+.dashboard-compact .dashboard-nav {
+    display: none;
+}
+
+.dashboard-nav header {
+    min-height: 84px;
+    padding: 8px 27px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dashboard-nav header .menu-toggle {
+    display: none;
+    margin-right: auto;
+}
+
+.dashboard-nav a {
+    color: #515151;
+}
+
+.dashboard-nav a:hover {
+    text-decoration: none;
+}
+
+.dashboard-nav {
+    background-color: #3057A1;
+}
+
+.dashboard-nav a {
+    color: #fff;
+}
+
+.brand-logo {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #515151;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.brand-logo:focus, .brand-logo:active, .brand-logo:hover {
+    color: #dbdbdb;
+    text-decoration: none;
+}
+
+.brand-logo i {
+    color: #d2d1d1;
+    font-size: 27px;
+    margin-right: 10px;
+}
+
+.dashboard-nav-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.dashboard-nav-item {
+    min-height: 56px;
+    padding: 8px 20px 8px 70px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    letter-spacing: 0.02em;
+    transition: ease-out 0.5s;
+}
+
+.dashboard-nav-item i {
+    width: 36px;
+    font-size: 19px;
+    margin-left: -40px;
+}
+
+.dashboard-nav-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-nav-dropdown {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.dashboard-nav-dropdown.show {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dashboard-nav-dropdown.show > .dashboard-nav-dropdown-toggle {
+    font-weight: bold;
+}
+
+.dashboard-nav-dropdown.show > .dashboard-nav-dropdown-toggle:after {
+    -webkit-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.dashboard-nav-dropdown.show > .dashboard-nav-dropdown-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.dashboard-nav-dropdown-toggle:after {
+    content: "";
+    margin-left: auto;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(81, 81, 81, 0.8);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.dashboard-nav .dashboard-nav-dropdown-toggle:after {
+    border-top-color: rgba(255, 255, 255, 0.72);
+}
+
+.dashboard-nav-dropdown-menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.dashboard-nav-dropdown-item {
+    min-height: 40px;
+    padding: 8px 20px 8px 70px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: ease-out 0.5s;
+}
+
+.dashboard-nav-dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.menu-toggle {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #3C64B1;
+}
+
+.menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
+    text-decoration: none;
+    color: #FF7955;
+}
+
+.menu-toggle i {
+    font-size: 20px;
+}
+
+.dashboard-toolbar {
+    min-height: 84px;
+   /* background-color: #dfdfdf;*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 27px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-item-divider {
+    height: 1px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background-color: rgba(236, 238, 239, 0.3);
+}
+
+@media (min-width: 992px) {
+    .dashboard-app {
+        margin-left: 238px;
+    }
+
+    .dashboard-compact .dashboard-app {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: 15px 0px;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1070;
+    }
+
+    .dashboard-nav.mobile-show {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-nav header .menu-toggle {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .dashboard-toolbar {
+        left: 218px;
+    }
+
+    .dashboard-compact .dashboard-toolbar {
+        left: 0;
+    }
+}
+
+.brand-logo img {
+    width: 7rem;
+}
+
+.exit {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.card-header {
+    display: flex;
+}
+
+.msg-inicial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(206, 206, 206, 0.815);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.bord-bem-vindo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.msg-inicial p,
+.bord-bem-vindo h1 {
+    text-align: left;
+}
+
+.msg-inicial p {
+    padding-right: .5rem;
+    font-size: .95rem;
+}
+
+.msg-inicial img {
+    width: 15rem;
+}
+
+.bord-bem-vindo {
+    width: 70%;
+    margin-left: 1.5rem;
+}
+
+.principais-func {
+    width: 30%;
+    margin-left: 3rem;
+    border: 1px solid rgba(206, 206, 206, 0.815);
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 5px;
+}
+
+.principais-func h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.info-func h4 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.info-func p {
+    text-align: left;
+    font-size: .95rem;
+}
+
+.buttons-principais,
+.buttons-categorias {
+    padding: 3rem 5rem;
+}
+
+.buttons-principais h3,
+.buttons-categorias h3  {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.buttons-principais .box-btn,
+.buttons-categorias .categorias {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons-categorias .categorias .saldo-atual,
+.buttons-categorias .categorias .saldo-receitas,
+.buttons-categorias .categorias .saldo-despesas,
+.buttons-categorias .categorias .saldo-poupanca,
+.buttons-categorias .categorias .saldo-cartao {
+    margin: 0 2rem 1rem 0;
+    width: 18%;
+}
+
+.buttons-categorias .categorias .saldo-atual input,
+.buttons-categorias .categorias .saldo-receitas input,
+.buttons-categorias .categorias .saldo-despesas input,
+.buttons-categorias .categorias .saldo-poupanca input,
+.buttons-categorias .categorias .saldo-cartao input {
+    width: 100%;
+    height: 5rem;
+    font-size: 2.2rem;
+    padding: 0 .5rem;
+    color: var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.buttons-categorias .categorias .saldo-atual label,
+.buttons-categorias .categorias .saldo-receitas label,
+.buttons-categorias .categorias .saldo-despesas label,
+.buttons-categorias .categorias .saldo-poupanca label,
+.buttons-categorias .categorias .saldo-cartao label {
+    font-size: .8rem;
+    color: var(--color-secundaria);
+    font-weight: bold;
+}
+
+.buttons-principais .cadastrar button,
+.buttons-principais .emitir button,
+.buttons-principais .conta-dash button {
+    width: 16rem;
+    height: 4rem;
+    font-size: 1.15rem;
+    border: 1px solid var(--color-principal);
+    color: #fff;
+    /*background-color: transparent;*/
+    background-color: var(--color-principal);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+}
+
+.buttons-principais .cadastrar button:hover,
+.buttons-principais .emitir button:hover,
+.buttons-principais .conta-dash button:hover {
+    background-color: var(--color-pr-hover);
+}
+
+.buttons-principais .emitir button {
+    margin-left: 1.5rem;
+}
+
+.buttons-principais .conta-dash button {
+    margin-right: 1.5rem;
+}
+
+.buttons-categorias .categorias a {
+    margin: 0 1rem 0 0;
+    color: #515151;
+    text-decoration: none;
+}
+
+.buttons-categorias .categorias p {
+    background-color: rgba(0, 0, 0, .05);
+    width: 15rem;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 3px;
+}
+
+.buttons-categorias .categorias p:hover {
+    background-color: #FF7955;
+    color: #fff;
+}
+
+/*HOMEPAGE*/
+.header-homepage .itens-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.container-home {
+    padding: 0 10rem;
+}
+
+.header-homepage {
+    padding: 0 10rem;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
+
+.header-login,
+.header-cadastrar {
+    padding: 1rem 10rem 3rem 10rem;
+}
+
+.header-homepage img,
+.header-login img,
+.header-cadastrar img {
+    width: 7rem;
+}
+
+.section-homepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-homepage {
+    width: 100%;
+    padding: 3rem 10rem 2rem 10rem;
+    /*background-color: rgba(0, 0, 0, .5);*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-homepage img {
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.section-homepage h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.info-info-homepage h3 {
+    color: rgb(141, 141, 141);
+    margin: 1rem 0 .5rem 0;
+}
+
+.info-info-homepage p {
+    font-size: .9rem;
+}
+
+.info-info-homepage button {
+    margin-top: 2.5rem;
+    width: 75%;
+    height: 4rem;
+    background-color: #3C64B1;
+    border: 1px solid #3C64B1;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.info-info-homepage button:hover {
+    background-color: #3057A1;
+    
+}
+
+.section-homepage span {
+    color: #3057A1;
+}
+
+.info-homepage {
+    width: 55%;
+}
+
+.info-info-homepage {
+    width: 45%;
+}
+
+
+.footer-homepage {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    padding: 0 10rem;
+}
+
+.footer-homepage p,
+.footer-login p {
+    text-align: center;
+    font-size: .65rem;
+    border-top: 1px solid rgb(218, 218, 218);
+    padding-top: .5rem;
+    
+}
+
+.footer-login {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 0 10rem;
+}
+
+.btns-home a {
+    text-decoration: none;
+}
+
+.btns-home .entrar {
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin-right: .5rem;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+}
+
+.btns-home .cadastrar {
+    border: 1px solid #FF7955;
+    background-color: transparent;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    color: #FF7955;
+    border-radius: 3px;
+}
+
+.btns-home .cadastrar:hover {
+    background-color: #FF7955;
+    color: #fff;
+}
+
+.btns-home .entrar:hover {
+    background-color: #f1f1f1;
+}
+
+.header-login .itens-menu,
+.header-cadastrar .itens-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+@media only screen and (min-width:1001px) and (max-width:1280px) {
+    .section-homepage h1 {
+        font-size: 2.3rem;
+    }
+
+    .info-info-homepage h3 {
+        font-size: .95rem;
+    }
+
+    .info-info-homepage p {
+        font-size: .8rem;
+    }
+
+    .header-login,
+    .header-cadastrar {
+        padding: 0 10rem 2rem 10rem!important;
+    }
+}
+
+@media only screen and (min-width:1581px) and (max-width:2080px) {
+    .main-homepage {
+        padding: 3rem 15rem 2rem 15rem;
+    }
+
+    .header-homepage,
+    .footer-homepage {
+        padding: 0 15rem;
+    }
+}
+
+@media only screen and (min-width:1500px) and (max-width:2080px) {
+    .formulario form {
+        padding: 1rem 4rem!important;
+    }
+
+    .container-home {
+        padding: 0 15rem!important;
+    }
+
+    .header-login,
+    .header-cadastrar {
+        padding: 0 15rem 2rem 15rem!important;
+    }
+
+    .banner-lateral-cadastro {
+        margin: 1rem 0 5rem 0!important;
+    }
+
+}
+
+@media only screen and (min-width:1001px) and (max-width:1400px) {
+    .consultar-receitas table th, 
+    .consultar-receitas table td {
+        padding: .2rem!important;
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1250px) {
+    .admin-sistema {
+        padding: 8rem 5rem!important;
+    }
+
+    .header-admin .itens-menu {
+        padding: 1rem 5rem!important;
+    }
+
+    .header-admin .itens-menu button {
+        border: 1px solid #fff!important;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1318px) {
+    .botoes-receita button {
+        margin: .5rem 0!important;
+    }
+
+    .formularios-receita label {
+        font-size: .8rem!important;
+    }
+
+    .btn-consult-data button {
+        font-size: .75rem!important;
+     }
+
+    .buttons-categorias .categorias .saldo-atual input,
+    .buttons-categorias .categorias .saldo-receitas input,
+    .buttons-categorias .categorias .saldo-despesas input,
+    .buttons-categorias .categorias .saldo-poupanca input,
+    .buttons-categorias .categorias .saldo-cartao input {
+        font-size: 1.8rem!important;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1085px) {
+    .buttons-categorias .categorias .saldo-atual label,
+    .buttons-categorias .categorias .saldo-receitas label,
+    .buttons-categorias .categorias .saldo-despesas label,
+    .buttons-categorias .categorias .saldo-poupanca label,
+    .buttons-categorias .categorias .saldo-cartao label {
+        font-size: .65rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    .container-home,
+    .main-homepage,
+    .footer-homepage,
+    .footer-login {
+        padding: 1rem;
+    }
+
+    .header-homepage {
+        padding: 0 2rem;
+        width: 100%;
+        position: fixed;
+        background-color: #fff;
+        z-index: 9;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+    }
+
+    .header-homepage .itens-menu {
+        padding: 1.5rem 0;
+    }
+
+    .section-homepage {
+        margin-top: 5rem;
+    }
+
+    .header-homepage img {
+        width: 6rem;
+    }
+
+    .info-homepage {
+        width: 100%;
+    }
+
+    .section-homepage img {
+        padding-left: 0;
+    }
+
+    .section-homepage {
+        flex-direction: column-reverse;
+    }
+
+    .section-homepage h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-info-homepage {
+        width: 100%;
+    }
+
+    .info-info-homepage button {
+        width: 100%;
+    }
+
+    .footer-homepage {
+        position: inherit;
+    }
+
+    .main-homepage {
+        position: inherit;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+    }
+
+    .card-header {
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .card-header,
+    .msg-inicial {
+        flex-direction: column;
+    }
+
+    .bord-bem-vindo,
+    .msg-inicial img {
+        width: 100%;
+    }
+
+    .bord-bem-vindo {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    .buttons-principais, .buttons-categorias {
+        padding: 0;
+    }
+
+    .buttons-principais .box-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-categorias .categorias {
+        flex-direction: column;
+    }
+
+    .saldo-atual, .saldo-receitas, 
+    .saldo-despesas, .saldo-poupanca, 
+    .saldo-cartao  {
+        margin: .65rem 0;
+    }
+
+    .saldo-atual input, .saldo-receitas input, 
+    .saldo-despesas input, .saldo-poupanca input, 
+    .saldo-cartao input {
+        width: 100%!important;
+    }
+
+    .buttons-principais .emitir button {
+        margin: 1rem 0 0 0;
+    }
+
+    .buttons-principais, .buttons-categorias {
+        margin-top: 2rem;
+    }
+
+    .principais-func {
+        display: none;
+    }
+   
+    .dashboard-app {
+        margin-top: 2.5rem;
+    }
+
+    .up {
+        display: none;
+    }
+
+    .footer-dash {
+        padding: 0 2rem;
+    }
+
+    .buttons-categorias .categorias a {
+        margin-right: 0;
+    }
+
+    .buttons-principais h3, 
+    .buttons-categorias h3 {
+        text-align: center;
+    }
+
+    .buttons-categorias {
+        margin-top: 5rem;
+    }
+
+    .buttons-categorias .categorias .saldo-atual,
+    .buttons-categorias .categorias .saldo-receitas,
+    .buttons-categorias .categorias .saldo-despesas,
+    .buttons-categorias .categorias .saldo-poupanca,
+    .buttons-categorias .categorias .saldo-cartao {
+        width: 100%;
+    }
+
+    /*Login*/
+    .header-login,
+    .header-cadastrar {
+        padding: 0;
+    }
+
+    .header-login .itens-menu,
+    .header-cadastrar .itens-menu {
+        padding: 2rem;
+    }
+
+    .container-login {
+        padding: 0 2rem!important;
+        flex-direction: column;
+    }
+
+    .formulario {
+        padding-left: 0!important;
+        margin: 3rem 0;
+    }
+
+    .formulario, .banner-lateral-login,
+    .formulario, .banner-lateral-cadastro {
+        width: 100%!important;
+    }
+
+    .banner-lateral-login h2,
+    .banner-lateral-cadastro h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .buttons-principais .cadastrar button,
+    .buttons-principais .emitir button,
+    .buttons-principais .conta-dash button {
+        width: 20rem;
+    }
+
+    .buttons-principais .conta-dash button {
+        margin: 0 0 1rem 0!important;
+    }
+
+/*——————————————————————CATEGORIA——————————————————————*/
+.receita .title-receita,
+.categoria .title-categoria, 
+.categoria .section-categoria,
+.receita .section-receita {
+    flex-direction: column;
+}
+
+.title-categoria h1 {
+    margin-top: 2rem;
+}
+
+.categoria .botoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria .botoes button {
+    margin: .7rem 0;
+}
+
+.divisor-align {
+    border: 3px solid transparent!important;
+    align-items: normal!important;
+}
+
+.container-categoria,
+.container-receita {
+    width: 100%!important;
+}
+
+.consultar-categorias,
+.consultar-receitas,
+.consultar-despesas {
+    padding: 0!important;
+}
+
+.receita .title-receita,
+.categoria .title-categoria, 
+.categoria .section-categoria,
+.receita .section-receita,
+.receita .r-usuario,
+.categoria .c-usuario,
+.categoria .c-saldos,
+.categoria .c-descricao,
+.receita .r-descricao,
+.categoria .btn-salvar,
+.categoria .btn-consultar {
+    padding: 0 2rem;
+}
+
+.consultar-categorias table th, 
+.consultar-categorias table td,
+.consultar-receitas table th, 
+.consultar-receitas table td,
+.consultar-despesas table th, 
+.consultar-despesas table td  {
+    padding: .5rem!important;
+}
+
+.formularios-categoria,
+.consultar-categorias,
+.consultar-receitas,
+.consultar-despesas {
+    width: 100%!important;
+}
+
+.consultar-categorias,
+.consultar-receitas,
+.consultar-despesas {
+    margin: 3rem 0;
+}
+
+.section-receita,
+.section-categoria {
+    padding: 0!important;
+}
+
+.formularios-categoria .c-saldos .box-1-categorias,
+.formularios-receita .r-saldos .box-1-receitas {
+    flex-direction: column;
+}
+
+.formularios-categoria .btn-salvar,
+.formularios-receita .btn-salvar {
+    float: none!important;
+}
+
+.formularios-categoria .c-saldo-receitas,
+.formularios-receita .r-saldo-receitas {
+    margin: 0!important;
+}
+
+.consultar-categorias,
+.consultar-receitas,
+.consultar-despesas {
+    margin-left: 0!important;
+}
+
+.consultar-categorias table th, 
+.consultar-categorias table td,
+.consultar-receitas table th, 
+.consultar-receitas table td {
+    padding: .3!important;
+    font-size: .8rem;
+}
+
+.botoes button {
+    width: 100%!important;
+    height: 3rem!important;
+}
+
+.formularios-categoria .btn-salvar input,
+.formularios-receita .btn-salvar input {
+    width: 100%;
+    margin: 1rem 0;
+    height: 3.5rem;
+}
+
+.title-categoria .botoes,
+.title-receita .botoes  {
+    margin-left: 0!important;
+}
+
+.r-consultar-data .btn-consult-data,
+.formularios-receita .r-datavalor,
+.r-select,
+.r-datas {
+    flex-direction: column!important;
+}
+
+.box-btns-consultar .btn-consultar {
+    justify-content: center!important;
+}
+
+/*
+.consultar-receitas .box-btns-consultar .r-consultar-data button {
+    width: 10rem;
+}*/
+
+.formularios-receita,
+.consultar-receitas,
+.consultar-despesas {
+    width: 100%!important;
+}
+
+.consultar-receitas table th, .consultar-receitas table td {
+    padding: .1rem!important;
+    font-size: .6rem!important;
+}
+
+.consultar-receitas,
+.consultar-despesas {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.formularios-receita .r-datavalor .r-campo-valor,
+.r-select .r-campo-desc-cat {
+    margin-left: 0!important;
+}
+
+.r-select .r-campo-desc-cat {
+    margin-top: 1rem;
+}
+
+.receita .title-receita,
+.receita .r-usuario,
+.receita .r-descricao {
+    padding: 0!important;
+ }
+
+.receita .formularios-receita,
+.consultar-receitas .box-btns-consultar,
+.consultar-despesas .box-btns-consultar {
+    padding: 2rem!important;
+ }
+
+ .tabela-receitas {
+    padding: 0 1rem!important;
+ }
+
+ .botoes-receita {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .botoes-receita button {
+    margin: .5rem 0;
+    height: 3rem!important;
+ }
+
+ .r-datas,
+ .consultar-receitas .btn-consultar button,
+ .consultar-despesas .btn-consultar button  {
+    width: 100%!important;
+ }
+
+ .r-datas .data-fim {
+    margin: 1rem 0!important;
+ }
+
+ .btn-consult-data button {
+    margin: .5rem 0!important;
+ }
+
+ .footer-receita .copyright p,
+ .footer-categoria .copyright p {
+    font-size: .6rem!important;
+ }
+
+ .d-qtd-parcelas {
+    margin-right: 0!important;
+    margin-bottom: 1rem!important;
+}
+
+.d-valor {
+    margin-bottom: 2rem;
+}
+
+.r-parc-valor {
+    flex-direction: column;
+}
+
+.consultar-despesas table th, .consultar-despesas table td {
+    font-size: .55rem!important;
+    padding: 0!important;
+}
+
+.tabela-despesas {
+    width: 100%;
+}
+
+.title-admin h1 {
+    text-align: center;
+    color: var(--color-principal);
+}
+
+.header-admin .itens-menu {
+    padding: 1rem!important;
+}
+
+.tabelas-admin form {
+    padding: 1rem!important;
+}
+
+.tabelas-admin table tr, 
+.tabelas-admin table td, 
+.tabelas-admin table th {
+    padding: .15rem!important;
+}
+
+.admin-sistema {
+    padding: 0!important;
+}
+
+.tabelas-admin form {
+    margin-left: 0!important;
+}
+
+.box-admin,
+.box-form-admin {
+    flex-direction: column;
+}
+
+.box-form-admin .box-2 {
+    margin-left: 0!important;
+}
+
+.footer-admin p {
+    margin: 0!important;
+}
+
+.formularios-admin form {
+    padding: 7rem 1rem!important;
+}
+
+.footer-admin p {
+    font-size: .55rem!important;
+    margin: 0 1rem!important;
+}
+
+.box-admin {
+    justify-content: center!important;
+    align-items: center!important;
+}
+
+.title-conta {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.box-conta, 
+.box-banco {
+    flex-direction: column;
+    border-left: 5px solid transparent!important;
+    padding: 1rem!important;
+}
+
+.box-cadastrar-conta, 
+.box-movimentar-conta,
+.saldo-limite input,
+.conta-consultar button,
+.box-cadastrar-banco {
+    width: 100%!important;
+}
+
+
+.conta-consultar h3 {
+    font-size: 1.2rem;
+}
+
+.conta-consultar form,
+.saldo-limite {
+    padding: 0 2rem;
+}
+
+.conta-consultar table tr,
+.conta-consultar table th,
+.conta-consultar table td {
+    font-size: .55rem!important;
+    padding: 0!important;
+}
+
+.box-movimentar-conta {
+    margin: 3rem 0 0 0!important;
+}
+
+.box-geral-banco {
+    flex-direction: column;
+}
+
+.box-banco {
+    padding: 2rem!important;
+    margin: 0!important;
+}
+
+.box-banco-1,
+.box-poupanca {
+    width: 100%!important;
+    padding: 2rem!important;
+}
+
+.box-banco-2 .conta-consultar {
+    margin-left: 0!important;
+}
+
+}
+
+/*LOGIN*/
+.container-login {
+    width: 100%;
+}
+
+.container-login {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 2rem 0 4rem 0;
+}
+
+.formulario, .banner-lateral-login,
+.formulario, .banner-lateral-cadastro {
+    width: 50%;
+}
+
+.banner-lateral-cadastro {
+    margin: 4rem 0 5rem 0;
+}
+
+.banner-lateral-login img,
+.banner-lateral-cadastro img {
+    width: 100%;
+}
+
+input:focus {
+    outline: none !important;
+    border:1px solid var(--color-secundaria);
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 30px white inset;
+    border: 1px solid grey;
+}
+
+
+.btns-home-login a {
+    margin-left: 1rem;
+    color: grey;
+}
+
+.btns-home-login a:hover {
+    text-decoration: none;
+    color: #FF7955;
+    
+}
+
+.formulario form input {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+
+.formulario .email, .formulario .senha {
+    margin: 1rem 0;
+}
+
+.formulario {
+    width: 40%;
+}
+
+.formulario form {
+    padding: 1rem;
+}
+
+.banner-lateral-login,
+.banner-lateral-cadastro {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.banner-lateral-login h2,
+.banner-lateral-cadastro h2 {
+    margin-bottom: 2rem;
+}
+
+.formulario h2 {
+    text-align: center;
+    border-bottom: 1px solid grey;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.banner-lateral-login p,
+.banner-lateral-cadastro p {
+    font-size: .7rem;
+    margin-top: 2rem;
+}
+
+.formulario .bt-entrar button {
+    margin-top: 4rem;
+    width: 100%;
+    height: 4rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    background-color: #3C64B1;
+    border: 1px solid #3C64B1;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.formulario p {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.formulario p a {
+    color: #3C64B1;
+}
+
+.btns-home p {
+    margin-top: 1rem;
+}
+
+.btns-home a .home {
+    color: grey;
+}
+
+.btns-home a .home:hover {
+    color: #FF7955;
+}
+
+/*FOOTER DASHBOARD*/
+.footer-dash {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.footer-dash p {
+    margin-top: .5rem;
+    font-size: .65rem;
+    text-align: center;
+    color: rgba(0, 0, 0, .5);
+}
+
+.container-cadastrar-conta {
+    padding: 0 5rem;
+}
+
+/*—————————————————————— RECEITA | DESPESA | CATEGORIA ——————————————————————*/
+.receita, .categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.categoria .title-categoria,
+.receita .section-receita,
+.categoria .section-categoria {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title-receita h1,
+.title-categoria h1 {
+    color: var(--color-principal);
+}
+
+.title-receita .botoes,
+.title-categoria .botoes {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.container-categoria, 
+.container-receita {
+    width: 100%;
+}
+
+.section-receita,
+.section-categoria {
+    width: 100%;
+}
+.section-categoria {
+    padding: 3rem;
+}
+
+.section-receita {
+    padding: 0 3rem 3rem 4rem;
+}
+
+.formularios-categoria {
+    width: 55%;
+}
+
+.consultar-categorias {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.formularios-receita {
+    width: 40%;
+}
+
+.consultar-receitas {
+    width: 60%;
+}
+
+.botoes .fa-comment-dollar {
+    font-size: 1.15rem;
+}
+
+.botoes-receita .fa-wallet,
+.botoes-receita .fa-pen {
+    margin-right: .2rem;
+}
+
+.formularios-categoria .c-saldos .box-1-categorias,
+.formularios-receita .r-saldos .box-1-receitas {
+    display: flex;
+}
+
+.formularios-categoria .c-usuario input,
+.formularios-categoria .c-saldos input, 
+.formularios-categoria .c-descricao input,
+.formularios-receita .r-usuario input,
+.formularios-receita .r-saldos input, 
+.formularios-receita .r-descricao input,
+.formularios-receita .r-datavalor input,
+.formularios-receita .r-select .r-campo-desc-cat input {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.formularios-categoria .c-saldo-receitas {
+    margin: 0 1rem;
+}
+
+.formularios-receita .r-saldo-receitas {
+    margin-left: 1.5rem;
+}
+
+.formularios-receita .r-datavalor {
+    display: flex;
+}
+
+.formularios-receita .r-datavalor .r-campo-valor {
+    margin-left: 1.5rem;
+}
+
+.consultar-categorias,
+.consultar-receitas,
+.consultar-despesas {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.025);
+    margin-left: 2rem;
+}
+
+.consultar-receitas {
+    margin: 3.5rem 0 0 4rem;
+}
+
+.consultar-receitas {
+    display: flex;
+    justify-content: center;
+}
+
+.consultar-categorias table,
+.consultar-receitas table,
+.consultar-despesas table {
+    text-align: center;
+}
+
+.consultar-categorias table th,
+.consultar-categorias table td {
+    border: .10rem solid rgba(0, 0, 0, .2);
+    padding: 1rem;
+}
+
+.consultar-receitas table th,
+.consultar-receitas table td {
+    border: .10rem solid rgba(0, 0, 0, .2);
+    padding: .2rem;
+}
+
+.consultar-despesas table th,
+.consultar-despesas table td {
+    border: .10rem solid rgba(0, 0, 0, .2);
+    padding: .5rem;
+    font-size: .7rem;
+}
+
+.formularios-categoria .btn-salvar,
+.formularios-receita .btn-salvar {
+    float: right;
+}
+
+.consultar-categorias a,
+.consultar-receitas a,
+.consultar-despesas a  {
+    color: var(--color-secundaria);
+    font-weight: 600;
+}
+
+.consultar-categorias a i,
+.consultar-receitas a i,
+.consultar-despesas a i   {
+    font-size: .7rem;
+}
+
+.botoes-receita button {
+    padding: 0 .5rem;
+    height: 2.5rem;
+    font-size: .9rem;
+    border: 1px solid var(--color-principal);
+    color: #fff;
+    /*background-color: transparent;*/
+    background-color: var(--color-principal);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    margin-right: .5rem;
+}
+
+.botoes-receita {
+    margin-bottom: 3rem;
+}
+
+.receita .divisor-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid  var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.formulario-receitas .r-select {
+    display: flex;
+    justify-content: center;
+}
+
+.consultar-receitas .btn-consultar button,
+.consultar-despesas .btn-consultar button {
+    width: 58%;
+    height: 3rem;
+}
+
+.r-datas {
+    display: flex;
+    width: 57%;
+}
+
+.r-datas .data-inicio,
+.r-datas .data-fim {
+    font-size: .8rem;
+}
+
+.r-datas .data-fim {
+    margin-left: 1rem;
+}
+
+.r-datas .data-inicio input,
+.r-datas .data-fim input {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid rgb(161, 161, 161);
+    padding: .5rem;
+}
+
+.r-datavalor .r-campo-data input,
+.r-datavalor .r-campo-valor input {
+    width: 100%;
+    padding: .5rem;
+}
+
+.r-consultar-data .btn-consult-data {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.r-consultar-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.r-select {
+    display: flex;
+}
+
+.r-select .r-campo-desc-cat {
+    margin-left: 1.5rem;
+}
+
+.r-select .r-campo-select select {
+    width: 100%;
+    height: 2.5rem;
+}
+
+.consultar-receitas .box-btns-consultar .r-consultar-data,
+.consultar-despesas .box-btns-consultar .r-consultar-data  {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.consultar-receitas .box-btns-consultar .r-consultar-data button,
+.consultar-despesas .box-btns-consultar .r-consultar-data button {
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-secundaria);
+    background-color: var(--color-secundaria);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+}
+
+.btn-consult-data button {
+    font-size: .75rem;
+    margin-right: .8rem;
+}
+
+.btn-consult-data i {
+    font-size: .65rem;
+    margin-right: .2rem;
+}
+
+.consultar-receitas .box-btns-consultar,
+.consultar-despesas .box-btns-consultar {
+    display: flex;
+}
+
+.tabela-receitas,
+.tabela-despesas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-qtd-parcelas {
+    margin-right: 1.5rem;
+}
+
+.d-valor input,
+.d-qtd-parcelas input {
+    width: 100%;
+    height: 2.5rem;
+}
+
+.r-parc-valor {
+    display: flex;
+}
+
+/*——————————————————————PADRÃO——————————————————————*/
+.divisor-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid  var(--color-principal);
+    margin-bottom: 3rem;
+}
+
+.botoes button {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-principal);
+    color: #fff;
+    /*background-color: transparent;*/
+    background-color: var(--color-principal);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+    margin: 0 .5rem;
+}
+
+.botoes button:hover,
+.botoes-receita button:hover {
+    background-color: var(--color-pr-hover);
+    color: #fff;
+}
+
+.botoes i {
+    margin-right: .5rem;
+}
+
+.btn-salvar input {
+    margin: 3rem 0 0 0;
+    width: 15rem;
+    height: 2.5rem;
+    background-color:  var(--color-secundaria);
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid var(--color-secundaria);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+    font-size: .9rem;
+}
+
+
+.btn-consultar button {
+    width: 100%;
+    margin-bottom: 1rem;
+    float: right;
+    height: 2rem;
+    background-color:  var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box-btns-consultar .btn-consultar,
+.box-btns-consultar .btn-consultar  {
+    justify-content: left;
+}
+
+.btn-consultar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-consultar p {
+    margin-right: 1rem;
+}
+
+.btn-consultar .fa-book-open {
+    margin-right: .5rem;
+    font-size: .75rem;
+}
+
+.btn-salvar input:hover,
+.btn-consultar button:hover {
+    background-color: var(--color-sec-hover);
+    color: #fff;
+}
+
+.footer-receita,
+.footer-categoria {
+    width: 100%;
+    padding: 7rem 3rem 0 3rem;
+    text-align: center;
+}
+
+.footer-receita .copyright,
+.footer-categoria .copyright {
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.footer-receita .copyright .fa-graduation-cap,
+.footer-categoria .copyright .fa-graduation-cap {
+    color: rgba(0, 0, 0, .25);
+}
+
+.footer-receita .copyright p,
+.footer-categoria .copyright p {
+    margin-top: .3rem;
+    font-size: .7rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+.admin-sistema {
+    padding: 8rem 10rem;
+}
+
+.header-admin {
+    background-color: var(--color-principal);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
+.box-admin {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.formularios-admin form{
+    width: 100%;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.tabelas-admin form {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f1f1f1;
+    margin-left: 2rem;
+}
+
+.header-admin img {
+    width: 7rem;
+}
+
+.header-admin .itens-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+}
+
+.header-admin .itens-menu button {
+    color: #fff;
+}
+
+.header-admin .itens-menu button:hover {
+    color: var(--color-principal);
+}
+
+.formularios-admin input {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding-left: .5rem;
+}
+
+
+.formularios-admin label {
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.box-form-admin {
+    display: flex;
+}
+
+.box-form-admin .box-2 {
+    margin-left: 2rem;
+}
+
+.btn-admin-alterar input {
+    margin-top: 1.15rem;
+    background-color: var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    border-radius: 5px;
+    height: 2.2rem;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+}
+
+.btn-admin-alterar input:hover,
+.tabelas-admin .btn-consultar-carteiras button:hover,
+.tabelas-admin .btn-consultar-usuarios button:hover {
+    cursor: pointer;
+    background-color: var(--color-sec-hover);
+    border: 1px solid var(--color-sec-hover);
+}
+
+.tabelas-admin table tr,
+.tabelas-admin table td,
+.tabelas-admin table th {
+    border: 1px solid grey;
+    padding: .5rem;
+}
+
+.tabelas-admin {
+    margin-top: 2rem;
+}
+
+.tabelas-admin a {
+    color: var(--color-secundaria);
+    font-size: .75rem;
+}
+
+
+.tabelas-admin .btn-consultar-carteiras button,
+.tabelas-admin .btn-consultar-usuarios button {
+    background-color: var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-admin {
+    margin-top: 5rem;
+}
+
+.footer-admin p {
+    text-align: center;
+    font-size: .7rem;
+    color: #9c9c9c;
+    border-top: 1px solid rgb(214, 214, 214);
+    margin: 0 10rem;
+    padding: .5rem 0;
+}
+
+.box-conta,
+.box-banco {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 3rem 0;
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.box-conta {
+    padding: 2rem 0;
+    border-left: 5px solid var(--color-sec-hover);
+}
+
+.box-banco {
+    margin-left: 5rem;
+    padding: 5rem;
+}
+
+.saldo-limite input {
+    width: 30%;
+}
+
+.b-nome input {
+    width: 100%;
+}
+
+.saldo-limite input,
+.b-nome input {
+    height: 2.5rem;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+}
+
+
+.limite {
+    margin-top: 1rem;
+}
+
+.saldo-limite,
+.limite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-cadastrar-conta, 
+.box-movimentar-conta {
+    width: 35%;
+}
+
+.box-cadastrar-banco {
+    width: 80%;
+}
+
+.box-cadastrar-banco select,
+.box-cadastrar-conta select,
+.box-cadastrar-conta input, 
+.box-movimentar-conta input,
+.box-cadastrar-banco input {
+    width: 100%;
+    height: 2.2rem;
+    padding-left: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.box-cadastrar-conta input:focus, 
+.box-movimentar-conta input:focus,
+.box-cadastrar-banco input:focus {
+    border: 1px solid var(--color-secundaria);
+}
+
+.box-movimentar-conta {
+    margin-left: 5rem;
+}
+
+.box-cadastrar-conta h2, 
+.box-movimentar-conta h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-secundaria);
+    margin-bottom: 1.5rem;
+}
+
+.c-saldo-conta {
+    margin: 0 0 2rem 0;
+}
+
+.c-data-criacao input,
+.c-data-mov input  {
+    padding-right: .5rem;
+}
+
+.conta-consultar form {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.box-botoes-sac {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-depositar {
+    margin-left: 1rem;
+}
+
+.btn-sacar,
+.btn-depositar  {
+    margin-top: 1rem;
+    width: 100%!important;
+}
+
+.box-cadastrar-conta .btn-salvar {
+    margin-top: -1rem!important;
+}
+
+.box-cadastrar-conta .btn-salvar input,
+.box-cadastrar-banco .btn-salvar input,
+.btn-sacar input,
+.btn-depositar input {
+    background-color: var(--color-secundaria);
+    height: 3rem;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid var(--color-secundaria);
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+}
+
+.box-cadastrar-banco .btn-salvar input:hover,
+.box-cadastrar-conta .btn-salvar input:hover,
+.btn-sacar input:hover,
+.btn-depositar input:hover,
+.conta-consultar button:hover {
+    background-color: var(--color-sec-hover);
+    border: 1px solid var(--color-sec-hover);
+    cursor: pointer;
+}
+
+.conta-consultar h3 {
+    font-size: 1.4rem;
+    color: var(--color-secundaria);
+    font-weight: 600;
+}
+
+.conta-consultar button {
+    background-color: var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+}
+
+.conta-consultar i {
+    margin-right: .5rem;
+}
+
+.btn-admin-alterar {
+    margin-top: .3rem;
+}
+
+.conta-consultar table a {
+    color: var(--color-secundaria);
+}
+
+.conta-consultar table tr,
+.conta-consultar table th,
+.conta-consultar table td {
+    border: 1px solid grey;
+    font-size: .9rem;
+    padding: .5rem;
+}
+
+.box-geral-banco {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.box-banco-2 .conta-consultar {
+    margin-left: 3rem;
+}
+
+.box-poupanca {
+    margin: 2rem 0 0 0;
+    background-color: rgba(0, 0, 0, 0.025);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-poupanca .box-cadastrar-banco {
+    margin: 1.5rem 0 0 0;
+}
+
+.box-poupanca .box-cadastrar-banco h3 {
+    color: var(--color-secundaria);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
